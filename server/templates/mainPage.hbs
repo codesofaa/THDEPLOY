@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thesis HUB</title>
+    <link href="css/mainpage.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navigation">
+        <div class="logo">
+            <img src="img/ccslogo.png" alt="Thesis HUB Logo" class="logo-img">
+            <a href="#">Thesis HUB</a>
+        </div>
+        <div class="nav-links">
+            <a href="mainPage" class="nav-link">Home</a>
+            <a href="chatbot" class="nav-link">CHATBOT</a>
+        </div>
+        <div class="user-icon">
+            <div class="icon-button">
+                <button class="dropbtn">
+                    <img src="img/icon.png" alt="User Icon">
+                </button>
+                <div class="dropdown-content">
+                    <a href="profile">Profile</a>
+                    <a href="logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form id="search-form">
+            <input type="text" id="search-query" placeholder="Search">
+            <button type="submit">Search</button>
+            <button type="button" class="settings-button">
+                <img src="img/settings.png" alt="Settings">
+            </button>
+            <div class="year-selection">
+                <label for="year">Select Year:</label>
+                <select id="year">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <!-- Add more years as needed -->
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div class="wrap">
+        <div class="box">
+            <div class="box-top">
+                <img class="box-image" src="img/frontpage.png" alt="Front Page">
+                <div class="title-flex">
+                    <h3 class="box-title">Thesis HUB</h3>
+                </div>
+                <p class="description">
+                    Abstract <br> <br>
+                    <a>Lorem ipsum dolor sit amet. Qui pariatur numquam sit rerum omnis in quidem praesentium rem numquam dolor cum eligendi animi sit voluptatem exercitationem</a>
+                </p>
+            </div>
+            <a href="#" class="button">See full document</a>
+        </div>
+    </div>
+
+    <!-- Main content of the page -->
+    <div class="content">
+        <!-- Your existing content here -->
+    </div>
+
+    <!-- Chatbox button -->
+    <button class="chatbox-button" onclick="toggleChat()">Chat</button>
+
+    <!-- Chatbox -->
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <span>Chat</span>
+            <button class="close-btn" onclick="toggleChat()">
+                <img src="img/xicon.png" alt="close-btn">
+            </button>
+        </div>
+        <div class="chatbox-content">
+            <!-- Chat content goes here -->
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" placeholder="Type a message...">
+            <button>Send</button>
+        </div>
+    </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/usersettings.js"></script>
+    <script src="js/yearselection.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const query = document.getElementById('search-query').value;
+            fetch(`/search/${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data); // Handle your search results here
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Home</title>
+  <script>
+    // Function to fetch existing theses
+    async function fetchTheses() {
+      try {
+        const response = await fetch('/api/theses');
+        const theses = await response.json();
+
+        const thesisSelect = document.getElementById('thesisSelect');
+        thesisSelect.innerHTML = '<option value="">Select a thesis</option>'; // Default option
+
+        theses.forEach(thesis => {
+          const option = document.createElement('option');
+          option.value = thesis._id;
+          option.textContent = `${thesis.titlename} (${thesis.year})`;
+          thesisSelect.appendChild(option);
+        });
+      } catch (error) {
+        console.error('Error fetching theses:', error);
+      }
+    }
+
+    // Function to delete the selected thesis
+    async function deleteThesis() {
+      const thesisId = document.getElementById('thesisSelect').value;
+
+      if (!thesisId) {
+        alert('Please select a thesis to delete');
+        return;
+      }
+
+      try {
+        const response = await fetch(`/api/thesis/${thesisId}`, {
+          method: 'DELETE'
+        });
+
+        if (response.ok) {
+          alert('Thesis deleted successfully');
+          fetchTheses(); // Refresh the list
+        } else {
+          alert('Failed to delete thesis');
+        }
+      } catch (error) {
+        console.error('Error deleting thesis:', error);
+      }
+    }
+
+    // Initialize the thesis list when the page loads
+    window.onload = fetchTheses;
+  </script>
+</head>
+<body>
+  <h1>Welcome to Admin Home</h1>
+  
+  <!-- File Upload Form -->
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="titlename">Title Name:</label>
+    <input type="text" id="titlename" name="titlename" required><br>
+
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" required><br>
+
+    <label for="year">Year:</label>
+    <input type="number" id="year" name="year" required><br>
+
+    <input type="file" name="thesisPDF" accept="application/pdf" required><br>
+
+    <button type="submit">Upload</button>
+    <a href="logout">Logout</a>
+  </form>
+
+  <!-- Delete Thesis Section -->
+  <h2>Delete a Thesis</h2>
+  <select id="thesisSelect">
+    <option value="">Loading...</option>
+  </select>
+  <button onclick="deleteThesis()">Delete Selected Thesis</button>
+</body>
+</html>

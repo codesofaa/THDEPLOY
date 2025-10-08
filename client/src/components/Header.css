@@ -1,0 +1,36 @@
+.header {
+  background-image: url(../../public/dhvsubg.png);
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  background-size: cover;  /* Ensures the image covers the entire header */
+  background-position: center;  /* Centers the image in the header */
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 100px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.header-logo {
+  height: 70px; /* Adjust size as needed */
+  width: 50px 50px;
+  margin-right: 10px;
+
+}
+
+
+@media (max-width: 480px) {
+  .header {
+    background-image: url(../../public/dhvsubg.png);
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-size: 1100px;  /* Ensures the image covers the entire header */
+    background-position: left;  /* Centers the image in the header */
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    
+    align-items: center;
+    box-shadow: 0 2px 100px rgba(0, 0, 0, 0.1);
+
+  }
+}

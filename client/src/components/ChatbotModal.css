@@ -1,0 +1,128 @@
+.chatbotmodal-overlay {
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+
+}
+
+.chatbotmodal-content {
+  
+  background: white;
+  border-radius: 8px;
+  padding: 50px;
+  width: 400px; /* Set width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Set the button to absolute positioning */
+  bottom: 10px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+ background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.chatbotmodal-close {
+  background: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  top: 1px;
+  right: 18px;
+  margin-left: 380px;
+  margin-bottom: 20px;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+
+
+/* CHAT BOT INPUT */
+.chatbot-input,
+.chat-input {
+display: flex;
+align-items: center;
+padding: 20px;
+background-color: #000000;
+border-radius: 0 0 20px 20px;
+}
+
+.chatbot-input{
+display: flex;
+align-items: center;
+padding: 5px;
+background-color: transparent;
+border-radius: 0 0 ;
+}
+
+.chatContainer{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 0 0 ;
+  }
+
+
+
+
+@media (max-width: 468px) {
+.chatbot-input {
+ display: flex;
+ align-items: center;
+ background-color: transparent;
+ border-radius: 0 0 ;
+}
+
+.modal-overlay {
+  max-height: 200vh; /* Further reduce max height */
+}
+}
+
+
+/* Responsive Design - Media Queries */
+@media (max-width: 768px) {
+  .chatbotmodal-content {
+    width: 90%; /* Full width on small screens */
+    padding: 20px;
+    bottom: 50px; /* Adjust modal position */
+    right: 10px;
+  }
+
+  .chatbotmodal-close {
+    font-size: 18px;
+    top: 5px;
+    right: 10px;
+  }
+
+  .chatbot-input, .chat-input {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatbotmodal-content {
+    width: 90%; /* Even more responsive for mobile */
+    padding: 15px;
+    bottom: 1px;
+    top: 10px;
+    right: 5px;
+    margin-top: 5%;
+  }
+
+  .chatbotmodal-close {
+    font-size: 16px;
+    top: 5px;
+    right: 5px;
+  }
+
+  .chatbot-input, .chat-input {
+    padding: 8px;
+  }
+}

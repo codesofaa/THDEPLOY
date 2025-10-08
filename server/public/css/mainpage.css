@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+  body {
+	background-size: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+	color: #212529;
+    text-align: left;
+    background-color: #fff;;
+    margin: 0px;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0.5rem 1rem;
+	display: flex;
+	background-color: #fff;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+	margin-bottom: 10px;
+	
+}
+.navigation {
+	display: flex;
+	justify-content: space-between; /* Space between logo and links */
+	align-items: center;
+	padding: 0 20px;
+	padding-bottom: 8px;
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+  }
+  
+ /* Logo image styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+	font-size: 18px;
+    align-items: center;
+	font-weight: 600;
+	color: #000;
+}
+
+.logo-img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+	margin-top: 5px;
+    margin-right: 10px; /* Optional: space between logo and text */
+}
+  
+  .nav-links {
+	flex-grow: 1;
+	display: flex;
+	justify-content: right; /* Center the links */
+	margin-right: 10px;
+	gap: 5px; /* Space between the links */
+  }
+  
+  .nav-link {
+	color: #000;
+	text-decoration: none;
+	padding: 5px 15px;
+	border-radius: 10px;
+	font-weight: 600;
+	text-align: center;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+	background: #17a2b8;
+	color: #fff;
+	transition: all 0.3s ease;
+  }
+
+  .user-icon{
+    position: relative;
+    display: inline-block;
+}
+
+/* Remove default button styles */
+.user-icon .dropbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Style the image to ensure it fits correctly */
+.icon-button img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: block; /* Ensures no unwanted space around the image */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Chatbox button styling */
+.chatbox-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chatbox-button:hover {
+    background-color: #17a2b8;
+    transform: scale(1.05);
+}
+
+/* Chatbox styling */
+.chatbox {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.chatbox-header {
+    background-color: #17a2b8;
+    color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close-btn img{
+	width: 15px;
+	height: 15px;
+}
+
+.chatbox-content {
+    padding: 10px;
+    height: calc(100% - 100px);
+    overflow-y: auto;
+}
+
+.chatbox-footer {
+    display: flex;
+    padding: 10px;
+	padding-top: 10px;
+    background-color: #f1f1f1;
+}
+
+.chatbox-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chatbox-footer button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatbox-footer button:hover {
+    background-color: #17a2b8;
+	color: #fff;
+
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	padding-top: 100px;
+	background: linear-gradient(to bottom, #ADD8E6, #FFFFFF); 
+	justify-content: center;
+}
+form{
+	background-color: none;
+	width: 550px;
+	height: 55px;
+	display: flex;
+	margin-top: -50px;
+}
+form input{
+	flex: 1;
+	border: none;
+	outline: none;
+	padding: 10px;
+}
+form button{
+	background: #17a2b8;
+	padding: 10px 30px;
+	border: none;
+	outline: #000;
+	color: #000;
+	letter-spacing: 1px;
+	cursor: pointer;
+}	
+.settings-button {
+	position: absolute;
+	left: 63%;	
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+	  
+.settings-button img {
+	width: 40px; /* Adjust size as needed */
+	height: 40px;
+	  
+}
+.settings-button:hover {
+	background-color: #17a2b8;
+	color: #fff;
+
+}
+.year-selection {
+	display: none; /* Hide by default */
+	position: absolute;
+	top: 99px; /* Adjust position as needed */
+	left: 66%;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	z-index: 1000;
+}
+.year-selection select {
+	width: 100%;
+	
+  }
+  .wrap {
+	display: flex;
+	margin-left: 10%;
+	margin-top: -800px;
+	align-items: stretch;
+	padding-bottom: 50px;
+	width: 20%;
+	gap: 24px;
+	flex-wrap: wrap;
+	border: solid 1px #ADD8E6;
+  }
+  .box {
+	display: flex;
+	height: 630px;
+	flex-direction: column;
+	flex-basis: 100%;
+	position: relative;
+	padding: 30px;
+	background: #fff;
+  }
+  
+  .box-top {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	gap: 12px;
+	margin-bottom: 36px;
+  }
+  
+  .box-image {
+	width: 100%;
+	height: 360px;
+	object-fit: cover;
+	object-position: 50% 20%;
+  }
+  
+  .title-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .box-title {
+	border-left: 3px solid #17a2b8;
+	padding-left: 130px;
+	text-align: center;
+  
+  }
+  
+  .button {
+	display: block;
+	text-align: center;
+	margin-bottom: 110px;
+	padding: 5px;
+	color: #000;
+	background: transparent;
+	box-shadow: 0px 0px 0px 1px black inset;
+	transition: 0.4s ease;
+  }
+  
+  .button:hover {
+	background-color: #17a2b8;
+    transform: scale(1.05);
+	color: #fff;
+  }
+  
+  
+  h1{
+	font-family:  sans-serif;
+	color: #000;
+	font-size: 2.4rem;
+  }
+  
+  p {
+	color: #000;
+	font-family: sans-serif;
+	text-align: start;
+	font-size: 1rem;
+	line-height: 150%;
+	letter-spacing: 2px;
+  }
+  .description a{
+	font-size: 0.8rem;
+  }
+  
+  .button-wrapper{
+	margin-top: 20px;
+  }
+  
+  .btn {
+	border: none;
+	margin-bottom: 70px;
+	padding: 12px 24px;
+	border-radius: 24px;
+	font-size: 12px;
+	font-size: 0.8rem;  
+	letter-spacing: 2px;  
+	cursor: pointer;
+  }
+  
+  .btn + .btn {
+	margin-left: 10px;
+  }
+  
+  .outline {
+	background: transparent;
+	color: #000;
+	border: 1px solid rgb(0, 0, 0);
+	transition: all .3s ease;
+	
+  }

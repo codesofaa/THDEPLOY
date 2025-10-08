@@ -1,0 +1,210 @@
+/* Modal Overlay */
+.profile-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark background for focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.profile-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto; /* Enable scrolling for smaller screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.profile-modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Profile Icon */
+.profile-modal-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-modal-icon-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile-modal-icon-preview:hover {
+  transform: scale(1.05);
+}
+
+/* Form */
+.profile-modal-form {
+  width: 100%;
+}
+
+.profile-modal-form-group {
+  margin-bottom: 20px;
+}
+
+.profile-modal-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.profile-modal-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.profile-modal-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Name Display */
+.profile-modal-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Buttons */
+.profile-modal-save-button {
+  background-color: #007bff;
+  color: #fff;
+  display: block;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 140px;
+  justify-content: center;
+}
+
+.profile-modal-close-button {
+  background-color: skyblue;
+  color: #fff;
+  border: none;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 120px;
+}
+
+
+
+.profile-modal-save-button:hover {
+  background-color: #03546d;
+}
+
+.profile-modal-close-button {
+  background-color: lightcoral;
+}
+
+.profile-modal-close-button:hover {
+  background-color: rgb(179, 3, 3);
+}
+
+.profile-modal-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.profile-modal-save-button,
+.profile-modal-close-button {
+  margin: 5px;
+}
+
+/* Message */
+.profile-modal-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #28a745;
+  text-align: center;
+}
+
+.profile-modal-message.error {
+  color: #dc3545;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-modal-content {
+    padding: 20px;
+  }
+
+  .profile-modal-icon-preview {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-modal-input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .profile-modal-save-button,
+  .profile-modal-close-button,
+  .profile-modal-confirm-button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+
+  .profile-modal-icon-preview {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-modal-input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .profile-modal-save-button,
+  .profile-modal-close-button,
+  .profile-modal-confirm-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

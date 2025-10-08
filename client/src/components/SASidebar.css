@@ -1,0 +1,67 @@
+.SAsidebar {
+  position: absolute;
+  padding-right: 20px;
+  display: flex; /* Arrange list items */
+  flex-direction: column; /* Stack items vertically */
+  padding: 5px; /* Padding inside the sidebar */
+  margin-top: 20px; /* Space below the header */
+  top: 70px; /* Position below the header */
+  left: 0; /* Align sidebar to the left */
+  z-index: 1000; /* Ensure it's above other elements */
+  background-color: #ffff; /* Sidebar background */
+  border-bottom-right-radius: 10px; /* Rounded corner */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.SAsidebar ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+  display: flex; /* Use flex for consistent styling */
+}
+
+.SAsidebar ul li {
+  position: relative; /* Needed for dropdown positioning */
+  margin: 10px 0; /* Vertical spacing between items */
+}
+
+.SAsidebar ul li a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  font-size: 18px; /* Font size */
+  padding: 8px 20px; /* Add padding for better clickability */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.SAsidebar ul li a:hover {
+  background-color: #03546d; /* Highlight background on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.SAsidebar ul li a.active {
+  background-color: skyblue; /* Active background */
+  color: white; /* Active text color */
+}
+
+.SAsidebar ul li a:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+.SAsidebar ul li button {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Default text color */
+  font-size: 18px; /* Match font size with links */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove default button border */
+  background-color: transparent; /* Match the initial background */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  width: 100%; /* Match width with links */
+  text-align: left; /* Align text to the left */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.SAsidebar ul li button:hover {
+  background-color: #03546d; /* Highlight background on hover */
+  color: #fff; /* Change text color on hover */
+}

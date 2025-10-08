@@ -1,0 +1,384 @@
+/* src/AdminPage.css */
+.admin-page {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-left: 5rem;
+  height: calc(120vh - 80px); /* Adjust for header/footer */
+  background-image: url(../../public/bgadmin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  animation: fadeIn 1.5s ease-out;
+
+}
+
+  .content-log {
+    width: 90%;
+    background-image: url(../../public/adminbg4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: contain;
+    animation: fadeIn 1.5s ease-out;
+    padding: 30px;
+    margin-top: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    padding-right: 5%;
+  }
+  
+  .greeting {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar-theses {
+    width: 50%;   
+    padding: 10px;
+    font-size: 16px;
+    margin-right: auto; 
+    margin-left: auto;  
+    border: none;
+  
+}
+  .theses-table {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    border-collapse: collapse;
+    background: transparent;
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+  .theses-table th{ 
+      width: 100%;
+      border-collapse: collapse;
+      overflow-y: auto;
+      background-color: transparent;
+      
+    }
+  
+  .theses-table th, .theses-table td {
+    border: 1px solid  black;
+    padding: 10px;
+    width: 10px;
+  }
+
+  .scrollable-overview {
+    max-height: 100px; /* Maximum height of the overview section */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 5px; /* Padding for better readability */
+    background-color: transparent; /* Light background color */
+    border: 1px solid #ddd; /* Border to make it visually distinct */
+    border-radius: 4px; /* Optional rounded corners */
+    word-wrap: break-word; /* Ensure text wraps inside the div */
+    font-size: 14px; /* Optional: Adjust font size */
+    line-height: 1.4; /* Optional: Improve text readability */
+}
+
+
+.scrollable-overview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-overview::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded scrollbar edges */
+}
+
+.scrollable-overview::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa; /* Darker color on hover */
+}
+  
+  .edit-button {
+    background-color: #5bc0de; /* Initial color for delete button */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin: 2%;
+  }
+
+  .edit-button:hover {
+    background-color: #03546d; /* Change color on hover */
+  }
+
+  .delete-button-theses {
+    background-color: lightcoral; /* Initial color for delete button */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .delete-button-theses:hover {
+    background-color: rgb(179, 3, 3); /* Change color on hover */
+  }
+  
+  .thesis-form {
+    margin-top: 20px;
+  }
+  
+  .form-input {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 290px;
+    max-width: 400px;
+    font-size: 16px;
+  }
+  
+  .save-button {
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+
+  /* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    
+  }
+  
+  .modal-buttons {
+    margin-top: 20px;
+  }
+
+  .pagination-theses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-theses button {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: skyblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination-theses button:disabled {
+    background-color: #ccc;
+  }
+  
+  .pagination-theses span {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  
+  .confirm-button {
+    background-color: #5bc0de;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+  .confirm-button:hover{
+    background-color: #03546d;
+  }
+  
+  .cancel-button {
+    background-color: lightcoral;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .cancel-button:hover {
+    background-color: rgb(179, 3, 3);
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+ .upload-button {
+    background-color: #5bc0de;
+    color: white;
+    padding: 6px 12px; /* Increased padding for better look */
+    border: 1px solid #cccccc00;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block; /* Ensures the button takes up only its content space */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.plus-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.upload-button:hover {
+    background-color: #03546d; /* Slightly darker on hover */
+}
+
+.sort-dropdown-theses {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.sort-dropdown-theses select {
+  width: 210px;
+  padding: 10px 12px;
+  font-size: 16px;
+  color: white;
+  background-color: #5bc0de;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 1415px;
+  margin-bottom: 10px;
+}
+
+.sort-dropdown-theses select:hover {
+  background-color: #03546d;
+  color: white;
+}
+
+.sort-dropdown-theses select:focus {
+  outline: none;
+  border-color: #03546d;
+}
+
+.sort-dropdown-theses option {
+  background-color: white;
+  color: #333;
+  padding: 10px;
+}
+  
+
+.form-input-overview {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  font-size: 16px;
+}
+
+/* RESPONSIVENESS FOR ADMINPAGE */
+@media screen and (max-width: 1280px) {
+  .admin-page {
+    padding-left: 2rem;
+  }
+
+  .content-log {
+    width: 95%;
+    padding: 20px;
+    margin-top: 10%;
+  }
+
+  .search-bar-theses {
+    width: 60%;
+  }
+
+  .theses-table th, .theses-table td {
+    padding: 0px;
+  }
+
+  .pagination-theses button {
+    padding: 8px 15px;
+  }
+}
+
+/* For tablets and smaller devices (below 768px) */
+@media screen and (max-width: 768px) {
+  .admin-page {
+    padding-left: 1rem;
+  }
+
+  .content-log {
+    width: 80%;
+    padding: 15px;
+    margin-top: 15%;
+  }
+
+  .search-bar-theses {
+    width: 80%; /* Full width for search bar */
+  }
+
+  .theses-table th, .theses-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .pagination-theses button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* For mobile devices (below 480px) */
+@media screen and (max-width: 480px) {
+  .admin-page {
+    padding-left: 1rem;
+  }
+
+  .content-log {
+    width: 95%;
+    padding: 10px;
+    margin-top: 20%;
+  }
+
+  .search-bar-theses {
+    width: 80%; /* Full width for mobile */
+  }
+
+  .theses-table th, .theses-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .pagination-theses button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .modal-content {
+    width: 80%; /* Adjust modal width for mobile */
+  }
+}

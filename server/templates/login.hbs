@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thesis HUB</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1_loginpage.css" rel="stylesheet">
+    <!-- Bootstrap CSS (for pop up message) -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body>
+
+{{#if alertMessage}}
+<div class="alert alert-{{alertType}} alert-dismissible fade show" role="alert">
+    {{alertMessage}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Thesis Hub</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+        </button>
+    </nav>
+    <header>
+        <div class="jumbotron" style="padding-bottom: 15rem; padding-top: 15rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>&nbsp;</p>
+                        <h2 class="text-center text-2xl font-bold mb-6">Log In</h2>
+                        <p class="text-sm text-center mb-4">Enter your credentials to continue with Thesis HUB</p>
+                        <p>&nbsp;</p>
+                        <form action="/login" method="post" class="col-sm-4 col-auto mx-auto my-2">
+                            <input class="form-control mr-sm-2" type="text" name="email" placeholder="Email" aria-label="email" required>
+                            <br>
+                            <input class="form-control mr-sm-2" type="password" name="password" placeholder="Password" aria-label="Password">
+                            <br>
+                            <button class="btn btn-block btn-primary" type="submit">Log In</button>
+                        </form>
+                        <p>&nbsp;</p>
+                        <div class="row">
+                            <div class="col-sm-4 col-auto mx-auto"> <a class="btn btn-block btn-success" href="./signup" title="">Make a new account</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>Copyright © 2024 Thesis HUB. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap-4.4.1.js"></script>
+    <!-- Bootstrap JS (for pop up message) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh/jFcqpzZN1l/rG7J8qqznJ0mZwYbIl1VszN" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+/* Main page layout */
+.main-page-logs-admin {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-left: 2rem;
+  height: auto;
+  background-image: url(../../public/bgadmin.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center ;
+  animation: fadeIn 1.5s ease-out;
+
+}
+/* Logs container */
+.logs-contents {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding-right: 5%;
+  background-image: url(../../public/adminbg6.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center ;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Greeting section */
+.greeting {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Top bar with search and sort */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+/* Search bar styling */
+.search-bar-admins {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sort-dropdown-super-logs {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.sort-button-super-logs {
+  background-color: #5bc0de;
+  color: white;
+  padding: 10px 12px;
+  border: 1px solid #cccccc00;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.sort-button-super-logs:hover {
+  background-color: skyblue;
+}
+
+.sort-menu-super-logs {
+  position: absolute;
+  top: 100%;
+  left: -22px;
+  margin-top: 3px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 110px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none; /* Initially hidden */
+  padding: 10px;
+  
+}
+
+.sort-dropdown-super-logs:hover .sort-menu-super-logs {
+  display: block; /* Show the dropdown on hover */
+}
+
+.sort-option-super-logs {
+  display: block;
+  background-color: transparent;
+  padding: 8px 12px;
+  width: 100%;
+  margin-top: 10%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.sort-option-super-logs:hover {
+  background-color: skyblue;
+  border-radius: 5px;
+  color: white;
+}
+
+.sort-option-super-logs.active {
+  background-color: skyblue;
+  color: white;
+  border-radius: 5px;
+}
+
+.sort-option-super-logs:focus {
+  outline: none;
+}
+
+/* Log table styling */
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.log-table th,
+.log-table td {
+  border: 1px solid black;
+  padding: 12px;
+  text-align: center;
+}
+
+.log-table th {
+  background-color: transparent;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Pagination styles */
+.pagination-super-logs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-super-logs button {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: skyblue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-super-logs button:disabled {
+  background-color: #ccc;
+}
+
+.pagination-super-logs span {
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+
+
+/* Adjust layout with sidebar */
+.logs-contents.SAsidebar-open {
+  margin-left: 250px; /* Adjust to match your sidebar width */
+  transition: margin-left 0.3s;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .main-page-logs-admin {
+    padding-left: 0rem;
+
+  }
+
+  .logs-contents {
+    width: 100%;
+    padding: 20px;
+    margin-top: 7%;
+    
+  }
+
+  .greeting {
+    font-size: 1.2rem;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .search-bar-admins {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .sort-dropdown-super-logs {
+    width: 100%;
+  }
+
+  .log-table th,
+  .log-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .pagination-super-logs {
+    align-items: center;
+  }
+
+  .pagination-super-logs button {
+    margin: 5px 0;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .main-page-logs-admin {
+  width: 100%;
+
+
+  }
+
+  .logs-contents {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-top: 15%;
+    margin-right: 10%;
+    
+  }
+
+  .search-bar-admins {
+    width: 80%;
+    margin-left: 5%;
+  }
+
+  .sort-button-super-logs {
+    font-size: 14px;
+  }
+
+  .log-table th,
+  .log-table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .pagination-super-logs button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

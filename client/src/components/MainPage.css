@@ -1,0 +1,1077 @@
+.App-results{
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: calc(100vh - 80px); /* Adjusts for header/footer height */
+  background-image: url(../../public/mpagebg2.gif);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  animation: fadeIn 1.2s ease-in-out; /* Fade-in animation */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.main-page {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 1rem;
+   height: calc(100vh - 80px); /* Adjusts for header/footer height */
+   background-color: #fff; /* For browsers that do not support gradients */
+   background-image: linear-gradient(#cdf7ff, transparent);
+   animation: zoomIn 1s ease-out; /* Zoom-in effect */
+  }
+  
+  /* Keyframes for zoom-in animation */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+ 
+   h2 {
+   font-size: 20px;
+   font-style: inherit;
+   color: #333;
+   }
+ 
+   /* Header Styling */
+   .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #ffffff; /* Example background color */
+     padding: 10px 20px;
+   }
+   
+   .logo {
+     height: 70px; /* Adjust as needed */
+   }
+   
+   .profile-section {
+     display: flex;
+     align-items: center;
+     padding: 10px;
+ 
+   }
+   
+   .profile-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-left: 15px; /* Add spacing between icon and buttons */
+    cursor: pointer;
+  } 
+   
+   .profile-dropdown {
+     display: flex;
+     flex-direction: column;
+     position: absolute;
+     right: 20px;
+     top: 70px;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+     width: 200px;
+   }
+ 
+   .logout-dropdown {
+    background-color: transparent;
+    font-size: large;
+    font-weight: bolder;
+  }
+  
+  .navbar-buttons {
+    display: flex;
+    align-items: center; /* Align buttons vertically */
+    gap: 10px; /* Add consistent spacing between buttons */
+    margin-right: auto; /* Remove negative margin */
+  }
+  
+  .contact-us-button{
+    background-color: #5bc0de; /* Blue background */
+    color: white;
+    border: none;
+    margin-left: -100px;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-us-button {
+    background-color: #5bc0de; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .logout-button {
+    background-color: #5bc0de;  /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-us-button:hover,
+  .logout-button:hover, .about-us-button:hover{
+    background-color: #0056b3; /* Darker blue */
+  }
+  
+  .menu-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Space between menu and buttons */
+  }
+  
+  .profile-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+ 
+  
+ 
+   .chatbot-button {
+    position: fixed;
+   bottom: 0%;
+    right: 20px;
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+   }
+
+   .Chatbotlogo {
+   position: fixed;
+    bottom: 0%;
+    right: 20px;
+    width: 100px;
+    margin: 4px 2px;
+    
+  
+    
+   }
+ 
+   .library-button {
+     background-color: transparent;
+     border: none;
+     cursor: pointer;
+     font-size: 16px;
+   }
+   
+   .chatbot-button:hover, .library-button:hover {
+     text-decoration:underline;
+ 
+   }
+ 
+   /* End of Header */
+   .star-button {
+     font-size: 20px;
+     cursor: pointer;
+     color: #ffcc00; /* Color of the star */
+     background: none;
+     border: none;
+   }
+   
+   .notification-container {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: rgba(0, 0, 0, 0.8);
+     color: white;
+     padding: 1rem;
+     border-radius: 0.5rem;
+     z-index: 1000;
+   }
+   
+   .notification {
+     background-color: #4caf50; /* Green background for success */
+     color: white;
+     padding: 10px 20px;
+     border-radius: 5px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   }
+   .notification-message {
+     margin: 0;
+   }
+   
+   .results {
+     margin-top: 20px;
+     max-height: 400px; /* Adjust based on your preference */
+     max-width: 50%;
+   }
+   
+   .result-item {
+     justify-content: space-between;
+     border-bottom: 1px solid #ddd;
+     padding: 0px 0;
+     animation: slideUp 0.8s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Keyframes for slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animate results alternately for a staggered effect */
+.result-item:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.result-item:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+   .menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    margin-left: -5%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  
+  .menu-options {
+    position: absolute;
+    top: 50px; /* Positioning below the menu button */
+    left: 0;
+    width: 100px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: -20%;
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menu-option-button {
+    display: flex;
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+  
+  .menu-option-button:hover {
+    background-color: #57c3de;
+    color: white;
+  }
+
+   .sidebar-mpage {
+    position: absolute;
+    top: 10%;
+    width: 300px; 
+    border: #e0f0ff;
+    padding: 20px;
+
+  }
+
+
+  .sidebar-container {
+    background-color: transparent; /* Light background color for the container */
+    border: 1px solid hsla(0, 0%, 87%, 0);    /* Add a border around the container */
+    padding: 15px;             /* Add some padding inside the container */
+    border-right: 1px solid #b3b3b3;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0); /* Add subtle shadow */
+    overflow-y: hidden; /* Scrollable if content overflows */
+    max-height: calc(85vh - 15px); /* Fit within viewport */
+    width: 90%;
+  }
+  
+  .sidebar-mpage h3 {
+    margin-top: 0px;             /* Adjust the margin of headings */
+    color: #333;               /* Text color */
+    margin-bottom: 10px;
+    font-size: medium;
+
+   
+  }
+  
+  .checkbox-group-mpage label {
+    top: 100px;
+    display: flex;
+    margin: 10px 15px;
+    overflow: hidden;
+    
+  }
+
+  .category-dropdown label {
+    display: block;
+    margin: 5px 15px;
+  }
+  
+  .category-list {
+    max-height: 200px; /* Adjust the height to fit your UI */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .category-list.expanded {
+    max-height: none; /* Allow the full height when expanded */
+  }
+  
+  .see-more-button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+
+
+  
+ 
+   .library-list {
+     margin-top: 20px;
+     max-height: 400px; /* Adjust based on your preference */
+     overflow-y: scroll; /* Enable vertical scrolling */
+     max-width: 90%;
+     
+   }
+ 
+   .library-item {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border-bottom: 1px solid #ddd;
+     padding: 10px 0;
+   }
+   
+   .result-title, .library-item-details .result-title {
+     font-weight: bold;
+   }
+   
+   .result-authors, .result-date, .library-item-details .result-authors, .library-item-details .result-date {
+     color: #555;
+   font-size: 0.875rem;
+   }
+   
+   .delete-button {
+     background: none;
+     border: none;
+     color: red;
+     cursor: pointer;
+     font-size: 16px;
+   }
+   
+   .modal-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000; /* Ensures it is above everything */
+   }
+   
+   .modal-content {
+     background: white;
+     padding: 20px;
+     border-radius: 8px;
+     width: 80%;
+     max-width: 90%;
+     max-height: 90%;
+     position: relative;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+     overflow-y: auto; /* Scrollable if content exceeds height */
+     z-index: 1010; /* Above overlay but below potential tooltips */
+   }
+
+   /* Disable Body Scroll when Modal is Open */
+body.modal-open {
+  overflow: hidden;
+}
+
+   
+   .modal-close {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     background: none;
+     border: none;
+     font-size: 18px;
+     cursor: pointer;
+   }
+ 
+   .content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Arrange items in a column */
+
+   
+  }
+   
+   .sidebar.hidden {
+     transform: translateX(-100%);
+   }
+   
+   .search-bar {
+    position: sticky;
+     display: flex;
+     align-items: center;
+     margin-bottom: 1rem;
+     width: 40%;
+     
+    z-index: 100; /* Ensure it stays above other content */
+   }
+   
+   .search-bar input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+  }
+  
+  .search-bar input[type="text"]:focus {
+    box-shadow: 0 0 10px #57c3de; /* Highlight on focus */
+    line: none;
+   }
+
+   @media (max-width: 768px) {
+    .search-bar {
+     display: flex;
+     align-items: center;
+      width: 69%;
+     background-color: transparent;
+     border-radius: 0 0 ;
+   }
+
+  }
+ 
+   .search-icon {
+     background-color: #57c3de; /* Blue background for the button */
+     color: black;
+     border: none;
+     padding: 10px 20px;
+     cursor: pointer;
+   }
+   
+   .date-icon {
+     background-color: #ffffff; /* Blue background for the button */
+     color: white;
+     border: none;
+     padding: 6px 20px;
+     cursor: pointer;
+   }
+   
+   .date-icon:hover, .search-icon:hover {
+     color: #0056b3  ;
+   }
+   
+   .results {
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease-in-out; /* Fade-in effect for the container */
+}
+
+.result-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    flex-direction: column;
+    animation: slideInUp 0.6s ease-in-out; /* Slide-in effect for each result */
+    opacity: 0; /* Ensure hidden before animation */
+    animation-fill-mode: forwards; /* Retain final state after animation */
+}
+
+.result-item:nth-child(even) {
+    animation-delay: 0.2s; /* Slight delay for even items */
+}
+
+.result-item:nth-child(odd) {
+    animation-delay: 0.4s; /* Slight delay for odd items */
+}
+
+.result-title {
+    font-size: 18px;
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover transitions */
+}
+
+.result-title:hover {
+    text-decoration: underline;
+    color: #003580; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+.result-authors,
+.result-date {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    opacity: 0; /* Hidden before animation */
+    animation: fadeIn 0.8s ease-in-out; /* Fade-in effect for details */
+    animation-fill-mode: forwards; /* Retain final state */
+    animation-delay: 0.6s; /* Appear after title animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px); /* Start slightly below */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* End at original position */
+        opacity: 1;
+    }
+}
+   
+   .date-icon {
+     font-size: 24px;
+     color: black;
+     cursor: pointer;
+     margin-right: 10px;
+   }
+   
+   .date-icon:hover {
+     color: #0056b3;
+   }
+   
+ /* Responsive Styles */
+
+
+ 
+ /* Pagination styles */
+ .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  background-image: url(../../public/mpagebg2.gif);
+ }
+ 
+ .pagination button {
+   background: #ffffff;
+   border: 1px solid #ddd;
+   color: #333;
+   cursor: pointer;
+   font-size: 16px;
+   margin: 0 5px;
+   padding: 9px 15px;
+ }
+ 
+ .pagination button.active {
+   background: #57c3de ;
+   color: black;
+   border-color: #57c3de;
+ }
+ 
+ .pagination button:hover {
+   background: #f1f1f1;
+   transform: scale(1.1); /* Slight zoom-in effect */
+   transition: background-color 0.3s, transform 0.3s ease-in-out;
+
+ }
+
+
+/* PDF Overlay */
+.pdf-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0; /* Initially invisible */
+  transform: scale(0.9); /* Start slightly smaller */
+  animation: fadeIn 0.5s ease-out forwards; /* Add fade-in and scale animation */
+}
+
+/* PDF Container */
+.pdf-iframe-container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  max-width: 1200px;
+  max-height: 80vh;
+  background: white;
+  overflow: hidden;
+  transform: scale(0.9); /* Slightly scale down on load */
+  opacity: 0; /* Initially invisible */
+  animation: slideIn 0.5s ease-out forwards; /* Slide-in and fade-in animation */
+}
+
+/* PDF iFrame */
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Keyframes for fade-in and scale effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9); /* Start smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* End at normal size */
+  }
+}
+
+/* Keyframes for sliding and fading in the iframe container */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(50px); /* Start from a lower position with a slight scale */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* End at normal position and size */
+  }
+}
+
+/* Mobile responsiveness: further adjust scaling */
+@media (max-width: 768px) {
+  .pdf-iframe-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.blank-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 1.5%;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0); /* Transparent overlay */
+  pointer-events: auto; /* Block interactions, set to auto to block interactions, set to none to allow */
+  z-index: 20; /* Ensure it's above the iframe */
+  cursor: not-allowed; /* Visual cue */
+  user-select: none; /* Attempt to prevent selection */
+  overflow: hidden; /* Prevents accidental scroll capture */
+}
+
+@media (max-width: 768px) {
+  .blank-overlay {
+    position: absolute;
+  top: 0;
+  left: 0;
+  right: 1.5%;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0); /* Transparent overlay */
+  pointer-events: none; /* Block interactions */
+  z-index: 20; /* Ensure it's above the iframe */
+  cursor: not-allowed; /* Visual cue */
+  user-select: none; /* Attempt to prevent selection */
+  overflow: auto; /* Prevents accidental scroll capture */
+    
+  }
+}
+
+.pdf-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 30; /* Ensure it's above all other layers */
+}
+
+.pdf-close-button:hover {
+  background: #555;
+}
+
+
+
+.sort-dropdown-main {
+  position: relative;
+	background-color:transparent;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	padding:3.5px 1px;
+	text-decoration:none;
+
+}
+
+.sort-dropdown-main {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.sort-button-main {
+  background-color: #5bc0de;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #cccccc00;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.sort-menu-main {
+  position: absolute;
+  top: 100%;
+  left: -22px;
+  margin-top: 3px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 110px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: none; /* Initially hidden */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sort-button-main:hover {
+  background-color: skyblue;
+}
+
+.sort-dropdown-main:hover .sort-menu-main {
+  display: block;
+}
+
+.sort-menu-main button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.sort-menu-main button:hover {
+  background-color: skyblue;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* FOR RESPONSIVENESS CHATBOT */
+
+   @media (max-width: 480px) {
+    .Chatbotlogo {
+      position: absolute;
+      bottom: 1%;
+       right: 0px;
+       width: 70px;
+       margin: 4px 2px;
+       
+    }
+
+    .chatbot-button {
+      position: absolute;
+      bottom: 1%;
+      right: 10px;
+      width: 80px;
+      height: 70px;
+      background-color: transparent;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .contact-us-button{
+      background-color:transparent; /* Blue background */
+      color: black;
+      border: none;
+      margin-right:-10px;
+      border-radius: 4px;
+      padding: 1px 1px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    position: relative;
+    top: 30px;
+      right: 30%;
+
+    }
+    
+    .about-us-button {
+      background-color:transparent; /* Blue background */
+      color: black;
+      position: relative;
+      top: 30px;
+      border: none;
+      border-radius: 4px;
+      padding: 20px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    
+      right: 30%;
+
+    }
+  
+    .logout-button {
+      background-color:transparent; /* Blue background */
+      color: black;
+      border: none;
+      position: relative;
+      top: 30px;
+      right: 20px;
+      border-radius: 4px;
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    
+      right: 30%;
+    }
+    
+    .contact-us-button:hover,
+    .logout-button:hover, .about-us-button:hover{
+      background-color: #0056b3; /* Darker blue */
+    }
+
+    .menu-button {
+      background-color: transparent;
+      color: black;
+      border: none;
+      position: relative;
+      right: 140px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .menu-options {
+      position: absolute;
+      top: 50px; /* Positioning below the menu button */
+      left: 0;
+      width: 100px;
+      background-color: #f8f9fa;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      top: 50px;
+      left: -140%;
+      padding: 5px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+  .Chatbotlogo {
+    position: absolute;
+     bottom: 1%;
+     right: 10px;
+     width: 70px;
+     margin: 4px 2px;
+     
+  }
+
+  .chatbot-button {
+    position: absolute;
+    bottom: 1%;
+    right: 10px;
+    width: 80px;
+    height: 70px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+}
+
+   /* FOR RESPONSIVENESS SIDEMBAR */
+
+   @media (max-width: 480px) {
+    .sidebar-mpage {
+      position: absolute;
+      top: 5%;
+      width: 300px;
+      border: #e0f0ff;
+      padding: 10px;
+  
+    }
+}
+
+
+@media (max-width: 768px) {
+  .sidebar-mpage {
+    position: absolute;
+    top: 12%;
+    width: 17%;
+    border: #e0f0ff;
+    padding: 10px;
+
+  }
+}
+
+ /* FOR PAGANATION SIDEMBAR */
+
+ @media (max-width: 480px) {
+   .pagination button {
+    font-size: 15px;
+    margin: 0 5px;
+    padding: 9px 8px;
+  }
+
+  .pagination button.active {
+    background: #57c3de ;
+    color: black;
+    border-color: #57c3de;
+  }
+  
+  .pagination button:hover {
+    background: #f1f1f1;
+  }
+}
+
+  @media (max-width: 768px) {
+    .pagination button {
+     font-size: 15px;
+     margin: 0 5px;
+     padding: 9px 8px;
+   }
+ 
+   .pagination button.active {
+     background: #57c3de ;
+     color: black;
+     border-color: #57c3de;
+   }
+   
+   .pagination button:hover {
+     background: #f1f1f1;
+   }
+}
+
+
+/* For category group headers with a down arrow */
+.category-group-mpage h3::after,
+.category-group h3::after {
+  content: "▼"; /* Default: Down arrow */
+  font-size: 12px; /* Adjust size */
+  margin-left: 8px; /* Space between text and arrow */
+  transition: transform 0.3s ease, content 0.3s ease; /* Smooth transition for rotation and content change */
+}
+
+/* Change to an up arrow when expanded */
+.category-group-mpage h3.expanded::after,
+.category-group h3.expanded::after {
+  content: "▲"; /* Change to up arrow */
+}

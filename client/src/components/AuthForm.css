@@ -1,0 +1,547 @@
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url(../../public/robot2.gif);
+  background-color:linear-gradient(#cdf7ff, transparent);;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  animation: fadeIn 1.5s ease-out;
+}
+
+
+/* Container for the login form and layout */
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-out;
+}
+
+.login-form {
+  animation: slideIn 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+
+/* Welcome section (left side) */
+.welcome-section {
+    width: 50%;
+    padding: 50px;
+    text-align: left;
+    color: #000;
+    border-radius: 10px 0 0 10px; /* Rounded on the left */
+}
+
+.welcome-section h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    color: #4e4e4e;
+    margin-top: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.welcome-section h1, .welcome-section p {
+  animation: slideIn 1.5s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+/* Login form section (right side) */
+.login-form {
+    width: 20%;
+    height: 60%;
+    padding: 80px;
+    border-radius: 10px 10px 10px 10px; /* Rounded only on the right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to bottom, #FFFFFF, #a6ddf0); /* Soft gradient background */
+    align-items: center;
+}
+
+
+.login-form h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+    border-radius: 10px;
+    padding: 10px 8px;
+}
+
+.login-form p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    
+    border-radius: 10px;
+    padding: 10px 8px;
+}
+
+/* Add keyframes for background gradient animation */
+@keyframes gradientAnimation {
+  0% {
+      background: linear-gradient(to bottom, #5AAEC9, #FFFFFF);
+  }
+  50% {
+      background: linear-gradient(to bottom, #FFFFFF, #5AAEC9);
+  }
+  100% {
+      background: linear-gradient(to bottom, #5AAEC9, #FFFFFF);
+  }
+}
+
+/* Add keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Add keyframes for text animation */
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+/* Input fields styling */
+.input-group {
+  
+    width: 100%;
+}
+
+input:focus {
+  border-color: #007BFF; /* Highlight border color on focus */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Add glow effect */
+  transform: scale(1.02); /* Slightly enlarge the input field */
+  outline: none; /* Remove default outline */
+}
+
+input[type="fname"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+}
+input[type="lname"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+}
+
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+  }
+
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+  }
+
+  input[type="showpassword"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+  }
+
+  input[type="confirmpassword"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+  }
+
+  input[type="snumber"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+  }
+
+  input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Smooth animation for focus */
+}
+
+/* Optional: Placeholder fade effect */
+input::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+input:focus::placeholder {
+  color: transparent; /* Hide placeholder when focused */
+}
+
+
+
+.login-form button {
+  width: 101%;
+  padding: 10px;
+  background-color: #007bbf;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+.login-form .switch-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #0079b8;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-form .switch-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+    .welcome-section {
+        opacity: 0;
+        width: 0%;
+        padding: 0%;
+    }
+}
+
+/* For screens with a width of 1280px and smaller (720p and smaller monitors) */
+@media screen and (max-width: 1280px) {
+    .login-container {
+      width: 90%; /* Make container width more flexible */
+    }
+  
+    .welcome-section {
+      width: 50%;
+      padding: 40px;
+    }
+  
+    .login-form {
+      width: 30%; /* Make form slightly wider */
+      padding: 60px;
+        background: transparent;
+    }
+    .main-content {
+        padding: 15px; /* Slightly reduce padding on smaller screens */
+      }
+
+      input[type="fname"],
+    input[type="lname"],
+    input[type="email"],
+    input[type="password"],
+    input[type="showpassword"],
+    input[type="confirmpassword"],
+    input[type="snumber"],
+    input[type="date"] {
+      width: 100%; /* Full width input fields */
+      margin: 1px;
+      padding: 2px;
+    }
+
+    .login-form button {
+        font-size: 14px; /* Smaller button text */
+        width: 112%;
+      }
+  }
+  
+  /* For tablets and smaller devices (below 768px) */
+  @media screen and (max-width: 768px) {
+
+    .main-content {
+        padding: 15px; /* Slightly reduce padding on smaller screens */
+      }
+
+    .login-container {
+      flex-direction: column;
+      width: 90%; /* Full width for the container */
+      padding: 20px;
+    }
+  
+    .welcome-section {
+      width: 100%; /* Full width for the welcome section */
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .login-form {
+      width: 100%; /* Full width for the login form */
+      padding: 40px;
+      margin-top: 20px;
+      background: transparent;
+    }
+  
+    .login-form h2 {
+      font-size: 20px; /* Slightly smaller heading */
+    }
+  
+    input[type="fname"],
+    input[type="lname"],
+    input[type="email"],
+    input[type="password"],
+    input[type="showpassword"],
+    input[type="confirmpassword"],
+    input[type="snumber"],
+    input[type="date"] {
+      width: 100%; /* Full width input fields */
+      margin: 1px;
+  
+    }
+  
+    .login-form button {
+      font-size: 14px; /* Smaller button text */
+    }
+  }
+  
+  /* For mobile devices (below 480px) */
+  @media screen and (max-width: 480px) {
+
+    .main-content {
+        padding: 15px; /* Slightly reduce padding on smaller screens */
+        height: calc(90vh - 100px); /* Adjusts for header/footer height */
+       
+      }
+
+    .login-container {
+      flex-direction: column;
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .welcome-section {
+      width: 0%; /* Full width for the welcome section */
+      padding: 0px;
+      text-align: center;
+    }
+  
+    .login-form {
+      width: 100%; /* Full width for the login form */
+      padding: 30px;
+      margin-top: 20px;
+      background: transparent;
+    }
+  
+    .login-form h2 {
+      font-size: 18px; /* Smaller heading for mobile */
+    }
+  
+    input[type="fname"],
+    input[type="lname"],
+    input[type="email"],
+    input[type="password"],
+    input[type="showpassword"],
+    input[type="confirmpassword"],
+    input[type="snumber"],
+    input[type="date"] {
+      width: 100%; /* Full width input fields */
+     
+    }
+  
+    .login-form button {
+      font-size: 14px; /* Smaller button text */
+    }
+  
+    .login-form .switch-link {
+      font-size: 12px; /* Smaller font size for the link */
+    }
+  }
+
+ 
+
+
+
+  /* (720p LANDSCAPE) For screens with a width of 1280px and smaller  */
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+    .login-container {
+      width: 90%; /* Make container width more flexible */
+    }
+  
+    .welcome-section {
+      width: 50%;
+      padding: 40px;
+    }
+  
+    .login-form {
+      width: 30%; /* Make form slightly wider */
+      padding: 60px;
+      background-color: transparent;
+    
+ 
+    }
+    .main-content {
+        padding: 15px; /* Slightly reduce padding on smaller screens */
+      }
+
+      input[type="fname"],
+    input[type="lname"],
+    input[type="email"],
+    input[type="password"],
+    input[type="showpassword"],
+    input[type="confirmpassword"],
+    input[type="snumber"],
+    input[type="date"] {
+      width: 100%; /* Full width input fields */
+      margin: 1px;
+ 
+    }
+  }
+  
+  /* (LANDSCAPE) For tablets and smaller devices  */
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+
+    .main-content {
+        padding: 15px; /* Slightly reduce padding on smaller screens */
+      }
+
+    .login-container {
+      flex-direction: column;
+      width: 90%; /* Full width for the container */
+      padding: 20px;
+    }
+  
+    .welcome-section {
+      width: 100%; /* Full width for the welcome section */
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .login-form {
+      width: 100%; /* Full width for the login form */
+      padding: 40px;
+      margin-top: 20px;
+      background: transparent;
+    }
+  
+    .login-form h2 {
+      font-size: 20px; /* Slightly smaller heading */
+    }
+  
+    input[type="fname"],
+    input[type="lname"],
+    input[type="email"],
+    input[type="password"],
+    input[type="showpassword"],
+    input[type="confirmpassword"],
+    input[type="snumber"],
+    input[type="date"] {
+      width: 100%; /* Full width input fields */
+      margin: 1px;
+      padding: 1px;
+    }
+  
+    .login-form button {
+      font-size: 14px; /* Smaller button text */
+
+    }
+  }
+  
+  /* For mobile devices (below 480px) */
+  @media screen and (max-width: 480px) and (orientation: landscape) {
+
+    .main-content {
+        padding: 15px; /* Slightly reduce padding on smaller screens */
+        height: calc(90vh - 100px); /* Adjusts for header/footer height */
+      }
+
+    .login-container {
+      flex-direction: column;
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .welcome-section {
+      width: 0%; /* Full width for the welcome section */
+      padding: 0px;
+      text-align: center;
+    }
+  
+    .login-form {
+      width: 100%; /* Full width for the login form */
+      padding: 30px;
+      margin-top: 20px;
+      background: transparent;
+    }
+  
+    .login-form h2 {
+      font-size: 18px; /* Smaller heading for mobile */
+    }
+  
+    input[type="fname"],
+    input[type="lname"],
+    input[type="email"],
+    input[type="password"],
+    input[type="showpassword"],
+    input[type="confirmpassword"],
+    input[type="snumber"],
+    input[type="date"] {
+      width: 100%; /* Full width input fields */
+     
+    }
+  
+    .login-form button {
+      font-size: 14px; /* Smaller button text */
+    }
+  
+    .login-form .switch-link {
+      font-size: 12px; /* Smaller font size for the link */
+    }
+  }
