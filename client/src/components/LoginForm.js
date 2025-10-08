@@ -23,7 +23,7 @@ const LoginForm = ({ onSwitchToRegister }) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`http://localhost:5000/login`, {
+            const response = await axios.post(`https://thdeploy.onrender.com/login`, {
                 email,
                 password
             }, {
@@ -61,7 +61,7 @@ const LoginForm = ({ onSwitchToRegister }) => {
         setForgotPasswordMessage('');
         
         try {
-            const response = await axios.post(`http://localhost:5000/forgot-password`, { email: forgotEmail });
+            const response = await axios.post(`https://thdeploy.onrender.com/forgot-password`, { email: forgotEmail });
             setForgotPasswordMessage(response.data.message || 'Successfully sent to your email, please check your inbox.');
             
             // Simulate 5-minute timeout for frontend enforcement

@@ -181,7 +181,7 @@ router.post("/signup", upload.single("corFile"), async (req, res) => {
 });
 
 const sendVerificationEmail = async ({ _id, email }, res) => {
-    const currentUrl = "http://localhost:5000/";
+    const currentUrl = "https://thdeploy.onrender.com/";
     const uniqueString = uuidv4() + _id;
 
     const mailOptions = {

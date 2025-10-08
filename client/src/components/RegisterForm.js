@@ -69,7 +69,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
             formData.append('studentNo', studentNo);
             formData.append('corFile', corFile); // Adding the COR file to FormData
         
-            const response = await axios.post('http://localhost:5000/signup', formData, {
+            const response = await axios.post('https://thdeploy.onrender.com/signup', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data' // Important for file uploads
                 }

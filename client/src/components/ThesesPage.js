@@ -28,7 +28,7 @@ const ThesesPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/theses", { withCredentials: true })
+      .get("https://thdeploy.onrender.com/api/theses", { withCredentials: true })
       .then((response) => {
         const activeTheses = response.data.filter((thesis) => !thesis.deleted);
         setTheses(activeTheses);
@@ -40,7 +40,7 @@ const ThesesPage = () => {
 
   const refreshTheses = () => {
     axios
-      .get("http://localhost:5000/api/theses", { withCredentials: true })
+      .get("https://thdeploy.onrender.com/api/theses", { withCredentials: true })
       .then((response) => {
         const activeTheses = response.data.filter((thesis) => !thesis.deleted);
         setTheses(activeTheses);
@@ -81,7 +81,7 @@ const ThesesPage = () => {
 
   const confirmDelete = () => {
     axios
-      .delete(`http://localhost:5000/api/thesis/${thesisToDelete}`)
+      .delete(`https://thdeploy.onrender.com/api/thesis/${thesisToDelete}`)
       .then(() => {
         setTheses(theses.filter((thesis) => thesis._id !== thesisToDelete));
         closeModal();

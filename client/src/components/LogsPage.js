@@ -19,7 +19,7 @@ const Logs = () => {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/logs', {
+        const response = await axios.get('https://thdeploy.onrender.com/api/logs', {
           withCredentials: true,
         });
 

@@ -8,7 +8,7 @@ const Sidebar = () => {
 
   // Logout handler
   const handleLogout = () => {
-    axios.get('http://localhost:5000/logout', { withCredentials: true })
+    axios.get('https://thdeploy.onrender.com/logout', { withCredentials: true })
       .then(response => {
         // Redirect to login page or handle redirection in another way
         window.location.href = '/'; 

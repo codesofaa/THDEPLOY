@@ -21,12 +21,12 @@ const ProfileModal = ({ isOpen, onClose }) => {
 
   const fetchUserData = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/profile', { withCredentials: true });
+        const response = await axios.get('https://thdeploy.onrender.com/profile', { withCredentials: true });
         const user = response.data;
         setName(user.name || '');
 
         // Fetch the profile image
-        const imageResponse = await axios.get('http://localhost:5000/profile/image', { 
+        const imageResponse = await axios.get('https://thdeploy.onrender.com/profile/image', { 
             responseType: 'blob',
             withCredentials: true 
         });
@@ -77,7 +77,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
         formData.append("profileIcon", imageFile); // Append the image file
       }
 
-      await axios.post('http://localhost:5000/profile/edit', formData, {
+      await axios.post('https://thdeploy.onrender.com/profile/edit', formData, {
         withCredentials: true,
         headers: { 'Content-Type': 'multipart/form-data' }
       });
@@ -98,7 +98,7 @@ const ProfileModal = ({ isOpen, onClose }) => {
       if (imageFile) {
         const formData = new FormData();
         formData.append("profileIcon", imageFile); // Append the image file
-        const response = await axios.post('http://localhost:5000/profile/image', formData, {
+        const response = await axios.post('https://thdeploy.onrender.com/profile/image', formData, {
           withCredentials: true,
           headers: { 'Content-Type': 'multipart/form-data' }
         });

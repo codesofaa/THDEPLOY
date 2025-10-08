@@ -33,7 +33,7 @@ const EditForm = ({ thesis, onClose, onUpdate }) => {
         }
 
         try {
-            const response = await axios.put(`http://localhost:5000/api/thesis/${thesis._id}`, updatedThesis, {
+            const response = await axios.put(`https://thdeploy.onrender.com/api/thesis/${thesis._id}`, updatedThesis, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

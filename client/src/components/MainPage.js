@@ -64,7 +64,7 @@ const MainPage = () => {
     const fetchUserData = async () => {
       try {
         // Fetch user data from profile endpoint
-        const response = await axios.get("http://localhost:5000/profile", {
+        const response = await axios.get("https://thdeploy.onrender.com/profile", {
           withCredentials: true,
         });
         const user = response.data;
@@ -74,7 +74,7 @@ const MainPage = () => {
 
         // Fetch the user's profile image
         const imageResponse = await axios.get(
-          "http://localhost:5000/profile/image",
+          "https://thdeploy.onrender.com/profile/image",
           {
             responseType: "blob",
             withCredentials: true,
@@ -89,7 +89,7 @@ const MainPage = () => {
         }
 
         const contentResponse = await axios.get(
-          "http://localhost:5000/profile/content",
+          "https://thdeploy.onrender.com/profile/content",
           {
             withCredentials: true,
           }
@@ -112,7 +112,7 @@ const MainPage = () => {
   // logout handler
   const handleLogout = () => {
     axios
-      .get("http://localhost:5000/logout", { withCredentials: true })
+      .get("https://thdeploy.onrender.com/logout", { withCredentials: true })
       .then((response) => {
         window.location.href = "/";
       })
@@ -125,7 +125,7 @@ const MainPage = () => {
 
   useEffect(() => {
     axios
-    .get("http://localhost:5000/api/theses", { withCredentials: true })
+    .get("https://thdeploy.onrender.com/api/theses", { withCredentials: true })
     .then((response) => {
       const activeTheses = response.data.filter((thesis) => !thesis.deleted);
       setTheses(activeTheses);
@@ -296,7 +296,7 @@ const MainPage = () => {
 
   const showPDF = (pdf) => {
     const encodedPdf = encodeURIComponent(pdf);
-    setPdfSrc(`http://localhost:5000/files/${encodedPdf}#toolbar=0`);
+    setPdfSrc(`https://thdeploy.onrender.com/files/${encodedPdf}#toolbar=0`);
     setPdfVisible(true);
   };
 
@@ -321,7 +321,7 @@ const MainPage = () => {
     setClickedFilenames(updatedFilenames); // Update the state
 
     const encodedPdf = encodeURIComponent(filename);
-    setPdfSrc(`http://localhost:5000/files/${encodedPdf}#toolbar=0`);
+    setPdfSrc(`https://thdeploy.onrender.com/files/${encodedPdf}#toolbar=0`);
     setPdfVisible(true); // Show the PDF iframe
   };
 

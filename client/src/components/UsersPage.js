@@ -22,7 +22,7 @@ const UsersPage = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/users/');
+      const response = await axios.get('https://thdeploy.onrender.com/api/users/');
       setUsers(response.data);
     } catch (err) {
       setError(err.message);
@@ -50,7 +50,7 @@ const UsersPage = () => {
 
   const handleApprovalChange = async (userId, isApproved) => {
     try {
-      await axios.post(`http://localhost:5000/api/users/approve`, {
+      await axios.post(`https://thdeploy.onrender.com/api/users/approve`, {
         userId,
         approved: isApproved
       });
@@ -61,7 +61,7 @@ const UsersPage = () => {
   };
 
   const handleViewCOR = (userId) => {
-    window.open(`http://localhost:5000/api/users/${userId}/cor`, '_blank');
+    window.open(`https://thdeploy.onrender.com/api/users/${userId}/cor`, '_blank');
   };
 
   const openDeleteModal = (userId) => {
@@ -78,7 +78,7 @@ const UsersPage = () => {
     if (userToDelete) {
       console.log('Attempting to delete user with ID:', userToDelete); // Check ID format
       try {
-        await axios.delete(`http://localhost:5000/api/users/${userToDelete}`);
+        await axios.delete(`https://thdeploy.onrender.com/api/users/${userToDelete}`);
         setUsers(users.filter(user => user._id !== userToDelete));
         closeDeleteModal();
       } catch (error) {

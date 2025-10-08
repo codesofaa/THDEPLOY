@@ -49,7 +49,7 @@ const UploadForm = ({ onClose, onUploadSuccess }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/upload",
+        "https://thdeploy.onrender.com/api/upload",
         formData,
         {
           headers: {

@@ -19,7 +19,7 @@ const ResetPassword = () => {
             return;
         }
         try {
-            const response = await axios.post(`http://localhost:5000/reset-password/${token}/${userId}`, {
+            const response = await axios.post(`https://thdeploy.onrender.com/reset-password/${token}/${userId}`, {
                 newPassword,
             });
             setMessage(response.data.message || 'Password reset successful.');

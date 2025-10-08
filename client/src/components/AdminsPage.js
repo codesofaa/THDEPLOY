@@ -39,7 +39,7 @@ const [editAdmin, setEditAdmin] = useState({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/admins/');
+        const response = await axios.get('https://thdeploy.onrender.com/api/admins/');
         setAdmins(response.data);
       } catch (err) {
         setError(err.message);
@@ -66,7 +66,7 @@ const [editAdmin, setEditAdmin] = useState({
 
   const handleAccessChange = async (adminId, hasAccess) => {
     try {
-      await axios.post(`http://localhost:5000/api/admins/access`, {
+      await axios.post(`https://thdeploy.onrender.com/api/admins/access`, {
         adminId,
         access: hasAccess
       });
@@ -92,7 +92,7 @@ const [editAdmin, setEditAdmin] = useState({
   const confirmDeleteAdmin = async () => {
     if (adminToDelete) {
       try {
-        await axios.delete(`http://localhost:5000/api/admins/${adminToDelete}`);
+        await axios.delete(`https://thdeploy.onrender.com/api/admins/${adminToDelete}`);
         setAdmins(admins.filter(admin => admin._id !== adminToDelete));
         closeDeleteModal();
       } catch (error) {
@@ -115,7 +115,7 @@ const [editAdmin, setEditAdmin] = useState({
   const handleAddAdminSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/admins/', newAdmin);
+      const response = await axios.post('https://thdeploy.onrender.com/api/admins/', newAdmin);
       setAdmins([...admins, response.data]); // Add new admin to state
       closeAddModal();
       setNewAdmin({ firstName: '', lastName: '', email: '', password: '' }); // Clear form
@@ -151,7 +151,7 @@ const [editAdmin, setEditAdmin] = useState({
   const handleEditAdminSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`http://localhost:5000/api/admins/${adminToEdit._id}`, editAdmin);
+      const response = await axios.put(`https://thdeploy.onrender.com/api/admins/${adminToEdit._id}`, editAdmin);
       // Update the state with the new details after successful update
       setAdmins(admins.map(admin => admin._id === adminToEdit._id ? response.data : admin));
       closeEditModal();
