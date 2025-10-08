@@ -240,7 +240,7 @@ router.get("/verify/:userId/:uniqueString", (req, res) => {
                                             .deleteOne({ userId })
                                             .then(() => {
                                                 // Redirect to the main page after verification
-                                                res.redirect("https://thesishub-swart.vercel.app/"); // Update to your main page URL
+                                                res.redirect("https://thesishub-swart.vercel.app"); // Update to your main page URL
                                             })
                                             .catch(error => {
                                                 console.log(error);
@@ -417,7 +417,7 @@ router.post('/forgot-password', async (req, res) => {
         await user.save();
 
         // Create the reset link
-        const resetUrl = `https://thesishub-swart.vercel.app//reset-password/${resetToken}/${user._id}`; // Ensure this matches your frontend route
+        const resetUrl = `https://thesishub-swart.vercel.app/reset-password/${resetToken}/${user._id}`; // Ensure this matches your frontend route
 
         // Send email
         const transporter = await createTransporter();

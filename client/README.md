@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [https://thesishub-swart.vercel.app/](https://thesishub-swart.vercel.app/) to view it in your browser.
+Open [https://thesishub-swart.vercel.app](https://thesishub-swart.vercel.app) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.

@@ -61,8 +61,8 @@ app.use(express.urlencoded({ extended: false }));
 
 // CORS AND ALLOWED ORIGIN
 const allowedOrigins = process.env.NODE_ENV === 'production' 
-    ? ['https://thesishub-swart.vercel.app/'] 
-    : ['https://thesishub-swart.vercel.app/'];
+    ? ['https://thesishub-swart.vercel.app'] 
+    : ['https://thesishub-swart.vercel.app'];
 
 app.use(cors({
     origin: allowedOrigins,
